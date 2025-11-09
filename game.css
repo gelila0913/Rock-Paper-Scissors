@@ -1,0 +1,35 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+  background-color: black;  
+  color:white;
+  align-content: center;
+}
+.game-container{
+    text-align: center;
+    background-color: black;
+    height:400px;
+    margin:20px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #3a2d3a, 0 0 40px #7d9fa3, 0 0 60px #68615b;
+    justify-content: center;
+
+}
+.game-container button{
+    border-style:none ;
+    box-shadow: 0 0 5px aqua  ;
+    background-color:black ;
+    color: aqua;
+    width: 100px;
+    height:30px;
+    border-radius: 5px;
+    margin:8px;
+}
+
+.game-container .beg{
+    margin: 20px;
+    }
