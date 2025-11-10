@@ -54,3 +54,55 @@ body{
     height:30px;
     border-radius: 5px;
 }
+.green{
+color:rgb(3, 224, 3);
+}
+.red{
+color:rgb(255, 0, 0);
+}
+
+/* ======= RESPONSIVE FOR DESKTOP ======= */
+@media (min-width:1024px) {
+   .game-container {
+      width: 60%;
+      height: auto;
+      margin: 40px auto;
+      border-radius: 30px;
+      box-shadow: 0 0 20px aqua, 0 0 60px #7d9fa3;
+   }
+
+   .game-container h2 {
+      font-size: 2.5rem;
+   }
+
+   .game-container button {
+      width: 140px;
+      height: 45px;
+      font-size: 1.1rem;
+      border-radius: 10px;
+      margin: 15px;
+   }
+
+   .vrs {
+      justify-content: space-evenly;
+      padding: 40px 0;
+      font-size: 1.2rem;
+   }
+
+   .vrs p {
+      font-size: 1.3rem;
+   }
+
+   .vs {
+      width: 70px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 1.2rem;
+      border-radius: 8px;
+   }
+
+   #player, #computer, #result {
+      font-size: 1.4rem;
+      min-width: 120px;
+   }
+}

@@ -15,6 +15,7 @@ resetBtn.addEventListener("click", () => {
     player.textContent = "YOU:";
     computer.textContent = "ME:";
     result.textContent = "";
+    result.classList.remove("green", "red"); // also reset colors
 });
 
 const choices = ["rock","paper","scissors"];
@@ -24,20 +25,21 @@ const result = document.getElementById("result");
 
 function playGame(playerchoice){
     const computerChoice = choices[Math.floor(Math.random()*3)];
-    
+
     let outcome = "";
+
     if(playerchoice === computerChoice){
         outcome = "It's A Tie";
     } else {
         switch(playerchoice){
             case "rock":
-                outcome = (computerChoice==="scissors") ? "☑️YOU WIN" : "❌YOU LOSE";
+                outcome = (computerChoice==="scissors") ? "☑️YOU WIN!" : "❌YOU LOSE!";
                 break;
             case "paper":
-                outcome = (computerChoice==="rock") ? "☑️YOU WIN" : "❌YOU LOSE";
+                outcome = (computerChoice==="rock") ? "☑️YOU WIN!" : "❌YOU LOSE!";
                 break;
             case "scissors":
-                outcome = (computerChoice==="paper") ? "☑️YOU WIN" : "❌YOU LOSE";
+                outcome = (computerChoice==="paper") ? "☑️YOU WIN!" : "❌YOU LOSE!";
                 break;
         }
     }
@@ -45,4 +47,14 @@ function playGame(playerchoice){
     player.textContent = `YOU: ${playerchoice}`;
     computer.textContent = `ME: ${computerChoice}`;
     result.textContent = outcome;
+
+    // ✅ COLOR THE RESULT HERE, INSIDE THE FUNCTION
+    result.classList.remove("green", "red");
+
+    if (outcome === "☑️YOU WIN!") {
+        result.classList.add("green");
+    } 
+    else if (outcome === "❌YOU LOSE!") {
+        result.classList.add("red");
+    }
 }
