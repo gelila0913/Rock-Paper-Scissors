@@ -29,7 +29,7 @@ function playGame(playerchoice){
     let outcome = "";
 
     if(playerchoice === computerChoice){
-        outcome = "It's A Tie";
+        outcome = "🤝It's A Tie";
     } else {
         switch(playerchoice){
             case "rock":
